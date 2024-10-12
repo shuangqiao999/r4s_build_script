@@ -50,6 +50,12 @@ curl -s https://$mirror/openwrt/patch/$generic/0010-include-kernel-add-miss-conf
 # meson: add platform variable to cross-compilation file
 curl -s https://$mirror/openwrt/patch/$generic/0011-meson-add-platform-variable-to-cross-compilation-fil.patch | patch -p1
 
+# kernel 6.12: add legacy cgroup v1 memory controller
+[ "$TESTING_KERNEL" = "y" ] && curl -s https://$mirror/openwrt/patch/$generic/0012-kernel-add-legacy-cgroup-v1-memory-controller.patch | patch -p1
+
+# kernel 6.12: add linux-rt support for aarch64/x86_64
+[ "$version" = "snapshots-24.10" ] && [ "$TESTING_KERNEL" = "y" ] && curl -s https://$mirror/openwrt/patch/$generic/0013-kernel-add-linux-rt-support-for-aarch64-x86_64.patch | patch -p1
+
 # mold
 if [ "$ENABLE_MOLD" = "y" ] && [ "$version" = "rc2" ]; then
     curl -s https://$mirror/openwrt/patch/generic/mold/0001-build-add-support-to-use-the-mold-linker-for-package.patch | patch -p1
