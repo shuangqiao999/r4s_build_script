@@ -20,8 +20,8 @@ on:
         default: 'snapshot-24.10'
         type: choice
         options:
-          - 'release'
-         # - 'snapshot-24.10'
+         # - 'release'
+          - 'snapshot-24.10'
       ccache:
         description: 'Enable ccache (Use Cache to speed up next build)'
         type: boolean
