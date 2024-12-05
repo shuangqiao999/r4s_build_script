@@ -7,7 +7,7 @@ index d13902a..32037b6 100644
    BuildTarget=$(BuildTargets/DumpCurrent)
  
 -  CPU_CFLAGS = -Os -pipe
-+  CPU_CFLAGS = -O3 -march=x86-64-v3 -pipe
+​+​  CPU_CFLAGS = -O3 -mtune=generic -pipe
    ifneq ($(findstring mips,$(ARCH)),)
      ifneq ($(findstring mips64,$(ARCH)),)
        CPU_TYPE ?= mips64
