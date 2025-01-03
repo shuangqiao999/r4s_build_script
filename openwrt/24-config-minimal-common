@@ -157,6 +157,7 @@ CONFIG_XDP_SOCKETS=y
 CONFIG_BPF_SYSCALL=y
 CONFIG_PACKAGE_libxdp=y
 CONFIG_PACKAGE_kmod-xdp-sockets-diag=y
+CONFIG_PACKAGE_bpfilter=y
 
 ### Utilities
 CONFIG_PACKAGE_bash=y
